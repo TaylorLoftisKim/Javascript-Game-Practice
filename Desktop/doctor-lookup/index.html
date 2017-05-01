@@ -3,15 +3,29 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Doctor</title>
+    <title>Doctor App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Doctor App</h1>
-      <label for="symptom">Enter a symptom:</label>
-      <input id="symptom" type="text">
-      <button class="btn-success" id="user-symptom">Get Doctors!</button>
-      <div class="showDoctor"></div>
+      <div class="jumbotron">
+        <h1>Doctor App</h1>
+      </div>
+      <div class="well">
+        <form class="" action="index.html" method="post">
+          <div class="form-group">
+            <label for="location">Enter a location:</label>
+            <input id="location" type="text">
+            <button class="btn btn-success" id="user-location">Get Doctors!</button>
+          </div>
+        </form>
+      </div>
+      <div class="well">
+        <h3>Search Results</h3>
+        <hr>
+        <div class="showResults">
+
+        </div>
+      </div>
     </div>
   </body>
 </html>
