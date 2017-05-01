@@ -2,6 +2,7 @@
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
     <link rel="stylesheet" href="build/css/styles.css"
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Doctor App</title>
@@ -12,20 +13,20 @@
         <h1 class="center">Doctor App</h1>
       </div>
       <div class="well">
-        <form class="" action="index.html" method="post">
+        <form id="userLocation">
           <div class="form-group">
-            <label for="location">Enter a location:</label>
+            <label for="location">Enter your Location:</label>
             <br>
-            <input id="location" type="text">
+            <input id="location" type="text" required="Please Enter Your Location">
             <button class="btn btn-primary" id="user-location">Get Doctors!</button>
           </div>
         </form>
       </div>
       <div class="well">
-        <h3 class="center">Search Results</h3>
+        <h3 class="center">Doctors</h3>
         <hr>
-        <div class="showResults">
-          
+        <div id="showDoctors">
+
         </div>
       </div>
     </div>

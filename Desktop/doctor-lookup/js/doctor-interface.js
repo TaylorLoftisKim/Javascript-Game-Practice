@@ -1,12 +1,19 @@
-var apiKey = require('./../.env').apiKey;
+var Doctor = require('./../js/doctor.js').doctorModule;
+
+var Doctors = function(doctors) {
+  doctors.forEach(function(doctor){
+      $('#showDoctors').append(
+        "<table class='table table-striped'><thead><th>First Name</th><th>Last Name</th><th>Title</th><th>Picture</th></thead><tbody><td><p>" + doctor.profile.first_name + "</p></td><td><p>" + doctor.profile.last_name + "</p></td><td><p>" + doctor.profile.title + "</p></td><td><img src=" + doctor.profile.image_url + "></img></td></tbody></table><hr>"
+      );
+  });
+}
 
 $(document).ready(function() {
-  $('#user-illness').click(function() {
-    var city = $('#illness').val();
-    $('#illness').val("");
-    $('.showDoctor').text("The city you have chosen is " + city + ".");
-    $.get('https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=' + city + '&appid=' + apiKey, function(response) {
-      console.log(response);
-    });
+  var newDoctor = new Doctor();
+  $('#userLocation').submit(function() {
+    event.preventDefault();
+    var location = $('#location').val();
+    $('#location').val("");
+    newDoctor.getDoctor(location, Doctors);
   });
 });
