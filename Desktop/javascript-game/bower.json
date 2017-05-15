@@ -1,0 +1,20 @@
+{
+  "name": "javascript-game",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Taylor Loftis-Kim <taylorloftiskim@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
